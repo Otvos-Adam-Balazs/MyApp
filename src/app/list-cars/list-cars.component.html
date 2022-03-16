@@ -1,0 +1,51 @@
+<body>
+
+  <form  (submit)="onAddPost()" id="add-car-component" >
+    <label class="w-100">
+      Név:
+      <input type="text" id="Name" class="form-control" />
+    </label>
+    <label class="w-100">
+      Üzemanyag:
+      <select id="Fuel">
+        <option >Benzin</option>
+        <option >Dizel</option>
+      </select>
+    </label>
+    <label class="w-100">
+      Évjárat:
+      <input type="month" id="Year" class="form-control" min="1900-01" max="2022-03"/>
+    </label>
+    <label class="w-100">
+      Ár:
+      <input type="number" id="Price" class="form-control" />
+    </label>
+    <button class="btn btn-outline-primary">
+              <span class="shadow"></span>
+                <span class="edge"></span>
+                <span class="front text"> Mentés</span>
+    </button>
+  </form>
+  
+<table class="mat-elevation-z8">
+    <thead>
+    <tr>
+      <th>Név</th>
+      <th>Üzemanyag</th>
+      <th>Évjárat</th>
+      <th>Ára</th>
+    </tr>
+    </thead>
+    <tr *ngFor="let car of cars">
+        <td>{{car.Name}}</td>
+        <td>{{car.Fuel}}</td>
+        <td>{{car.Year}}</td>
+        <td>{{car.Price}}</td>
+    </tr>
+  </table>
+  <button class="btn btn-outline-primary" routerLinkActive="active"  routerLink="">
+    <span class="shadow"></span>
+      <span class="edge"></span>
+      <span class="front text"> Kijelentkezés</span>
+</button>
+</body>

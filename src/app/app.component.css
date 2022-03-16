@@ -1,0 +1,10 @@
+.ul-nav{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
